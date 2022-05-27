@@ -3,7 +3,12 @@ import { HeaderProps } from "./Header.type";
 
 const Header = (props: HeaderProps) => {
   return (
-    <div className="flex items-center w-full h-16 bg-black p-4">
+    <div className="flex w-full h-14 z-50 items-center bg-black transition duration-300 ease-in-out drop-shadow-x mb-5 p-4">
+      {props.isGoback && (
+        <div className="mr-2 hover: cursor-pointer" onClick={props.onGoback}>
+          <img src="/images/chevronLeft.svg" alt="Chevron left icon" />
+        </div>
+      )}
       <div className="text-lg text-white">{props.title}</div>
     </div>
   );
