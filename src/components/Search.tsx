@@ -3,12 +3,12 @@ import { SearchProps } from "./Search.type";
 
 const Search = (props: SearchProps) => {
   return (
-    <div className="relative">
+    <>
       <input
         value={props.value}
         onChange={props.onSearch}
         placeholder={props.placeholder}
-        className="w-full h-12 flex justify-center items-center bg-slate-100 focus:outline-none rounded-xl px-10"
+        className="w-full h-12 flex justify-center items-center bg-slate-100 focus:outline-none rounded-xl px-11"
       />
       <img
         src="/images/search.svg"
@@ -18,12 +18,12 @@ const Search = (props: SearchProps) => {
       {props.value && (
         <div
           onClick={props.onDelete}
-          className="absolute right-4 -mt-9"
+          className="absolute right-6 -mt-9"
         >
           <img src="images/cross.svg" alt="Close icon" />
         </div>
       )}
-    </div>
+    </>
   );
 };
 
